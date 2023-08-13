@@ -1,0 +1,50 @@
+RAM Allocation [bytes]
+Variable                                                                          Address   Size
+------------------------------------------------------------------------------------------------
+read_curr1                                                                        0x0A00       4
+read_curr2                                                                        0x0A04       4
+rx_buffer0                                                                        0x0A08      32
+tx_buffer0                                                                        0x0A28      32
+
+EEPROM Allocation [bytes]
+Variable                                                                          Address   Size
+------------------------------------------------------------------------------------------------
+
+Register Allocation
+Variable                                                                          Register  Size
+------------------------------------------------------------------------------------------------
+G                                                                                 R4           1
+rx_wr_index0                                                                      R3           1
+rx_rd_index0                                                                      R6           1
+rx_counter0                                                                       R5           1
+rx_buffer_overflow0                                                               GPIOR0.0  1bit
+tx_wr_index0                                                                      R8           1
+tx_rd_index0                                                                      R7           1
+tx_counter0                                                                       R10          1
+adc_data                                                                          R11,R12      2
+
+FLASH Allocation [words]
+Function                                                                          Address   Size
+------------------------------------------------------------------------------------------------
+pin_change_isr2                                                                   0x000BE      1
+usart0_rx_isr                                                                     0x000BF     32
+getchar                                                                           0x000DF     19
+usart0_tx_isr                                                                     0x000F2     24
+putchar                                                                           0x0010A     29
+adc_isr                                                                           0x00127      5
+read_adc                                                                          0x0012C     42
+Motor1_right                                                                      0x00156      6
+Motor1_left                                                                       0x0015C      6
+Motor2_right                                                                      0x00162      6
+Motor2_left                                                                       0x00168      6
+Motor3_right                                                                      0x0016E      6
+Motor3_left                                                                       0x00174      6
+Motor4_right                                                                      0x0017A      6
+Motor4_left                                                                       0x00180      6
+read_current2                                                                     0x0018B     15
+main                                                                              0x0019A    301
+put_usart_G100                                                                    0x002C7     14
+_print_G100                                                                       0x002D5    308
+printf                                                                            0x00409     37
+strlen                                                                            0x0042E     12
+strlenf                                                                           0x0043A     13

@@ -1,0 +1,25 @@
+      E=getchar();
+      delay_ms(1);
+      if(E == 'X')
+      {
+       adc_0 = read_adc(0);
+       adc_1 = read_adc(1);
+       adc_2 = read_adc(2);
+       adc_3 = read_adc(3);
+       adc_4 = read_adc(4);
+       adc_5 = read_adc(5);
+       adc_6 = read_adc(6);
+       adc_7 = read_adc(7);
+       PINH_7 = (PINH & (1<<7 ))?1:0;
+       printf(
+       "$%d,%d,%d,%d,%d,%d,%d,%d,"
+       "%1d%1d%1d%1d%1d%1d%1d%1d,%1d%1d%1d%1d,%1d%1d%1d%1d\n\r \n\r",
+       adc_0,adc_1,adc_2,adc_3,adc_4,adc_5,adc_6,adc_7,
+       PINE.6,PINE.7,PINB.4,PINB.5,PINB.6,PINB.7,PINH_7,PING.3,
+       PINA.7,PINA.6,PINA.5,PINA.4,PIND.4,PIND.5,PIND.6,PIND.7);
+       }
+
+      if( E == 'A' )
+      {
+      Relay_1 = (Relay_1 == 1)?0:1;
+      }

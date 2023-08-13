@@ -1,0 +1,45 @@
+RAM Allocation [bytes]
+Variable                                                                          Address   Size
+------------------------------------------------------------------------------------------------
+read_curr1                                                                        0x0A00       4
+read_curr2                                                                        0x0A04       4
+rx_buffer0                                                                        0x0A08      96
+tx_buffer0                                                                        0x0A68      96
+
+EEPROM Allocation [bytes]
+Variable                                                                          Address   Size
+------------------------------------------------------------------------------------------------
+
+Register Allocation
+Variable                                                                          Register  Size
+------------------------------------------------------------------------------------------------
+G                                                                                 R4           1
+rx_wr_index0                                                                      R3           1
+rx_rd_index0                                                                      R6           1
+rx_counter0                                                                       R5           1
+rx_buffer_overflow0                                                               GPIOR0.0  1bit
+tx_wr_index0                                                                      R8           1
+tx_rd_index0                                                                      R7           1
+tx_counter0                                                                       R10          1
+adc_data                                                                          R11,R12      2
+
+FLASH Allocation [words]
+Function                                                                          Address   Size
+------------------------------------------------------------------------------------------------
+usart0_rx_isr                                                                     0x000BE     32
+getchar                                                                           0x000DE     19
+usart0_tx_isr                                                                     0x000F1     24
+putchar                                                                           0x00109     29
+adc_isr                                                                           0x00126      5
+read_adc                                                                          0x0012B     42
+Motor1_right                                                                      0x00155      6
+Motor2_right                                                                      0x0015B      6
+Motor3_right                                                                      0x00161      6
+Motor4_right                                                                      0x00167      6
+read_current2                                                                     0x00172     13
+main                                                                              0x0017F    273
+put_usart_G100                                                                    0x00290     14
+_print_G100                                                                       0x0029E    308
+printf                                                                            0x003D2     37
+strlen                                                                            0x003F7     12
+strlenf                                                                           0x00403     13
